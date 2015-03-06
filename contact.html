@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Miha Vidakovic</title>
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<div class="logo">
+			<a href="http://vidakovic.si">
+				<h1>Miha Vidakovič</h1>
+			</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="work.html">Work</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li class="active"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<section class="contact">
+	<div id="googleMap"></div>
+
+	<div class="container">
+		<h2>Contact me</h2>
+		<p>You can reach me at <a href="mailto:miha@vidakovic.si">miha@vidakovic</a> or you can use contact form below.</p>
+		<div class="contact-form">
+			<form>
+				<input type="text" name="name" placeholder="Your full name">
+				<input type="email" name="email" placeholder="Email address">
+				<textarea rows="7" name="message" placeholder="Your message"></textarea>
+				<button type="submit">Send</button>
+			</form>
+		</div>
+		<h2>Alternative</h2>
+		<p>If email is not your thing you always can reach me on social media.</p>
+	</div>
+</section>
+
+<footer>
+		<ul>
+			<li class="dribble">
+				<a href="#"><i class="ion-social-dribbble-outline"></i></a>
+			</li>
+			<li class="twitter">
+				<a href="#"><i class="ion-social-twitter"></i></a>
+			</li>
+			<li class="linkedin">
+				<a href="#"><i class="ion-social-linkedin"></i></a>
+			</li>
+			<li class="mail">
+				<a href="#"><i class="ion-ios-email-outline"></i></a>
+			</li>
+		</ul>
+		<div class="button">
+			<a href="#">LET’S WORK ON AWESOME STUFF TOGETHER!</a>
+		</div>
+</footer>
+<script>
+function initialize()
+{
+  var mapProp = {
+    center: new google.maps.LatLng(46.2346159,14.3526467),
+    zoom:13,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    panControl: false,
+    zoomControl: false,
+    scaleControl: false,
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+function loadScript()
+{
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+</script>
+</body>
+</html>
